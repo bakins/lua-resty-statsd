@@ -13,7 +13,7 @@ function _M.new(options)
         tags = options.tags or {},
         timeout = options.timeout or 250,
         queue = {},
-        delay = options.delay or 0.500,
+        delay = (options.delay or 500) / 1000,
         timer_started = false
     }
     return setmetatable(self, mt)
